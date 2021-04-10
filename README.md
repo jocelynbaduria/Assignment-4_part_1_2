@@ -1,17 +1,26 @@
 # Deep Learning Assignment-4_part_1_2
 MNIST Classifier Using Numpy and Keras
 
-# Part1 - NN MNIST Using Numpy 
+# Part1 - NN MNIST Using Numpy ( Accuracy -> 0.958 )
 1. Neural Nets MNIST 3 layer Model with Normalization prior Training
-Training MNIST - Error and Accuracy Without Mini-Batch and dropout with Learning rate(0.005), Iterations ( 350 )
+- Training MNIST - Error and Accuracy Without Mini-Batch and dropout with Learning rate(0.005), Iterations ( 350 )
+
+Results : 
+
 I:349 Train-Error:0.108 Train-Accuracy:1.0
+
 Test-Error:0.653, Test-Accuracy:0.7073
 
-2. Adding Dropout
+# 2. Adding Dropout ( Test Accuracy -> 0.8065 )
 The test accuracy improved from 0.7073 ~ 0.8065
+
+Results :
+
 Epoch:299 Training-Error:0.342-> Training-Accuracy:0.883, Test-Error:0.413 -> Test-Accuracy:0.8065
 
-3. Adding Minibatch Gradient Descent (minibatch=64, lr=0.005) and experimented learning rate from 0.001 to 0.005 
+# 3. Adding Minibatch Gradient Descent (minibatch=64, lr=0.005) and experimented learning rate from 0.001 to 0.005 ( Test Accuracy -> 0.8012 )
+
+Results :
 
 First run (minibatch =128, lr=0.001):
 Epoch:299 Training-Error:0.712-> Training-Accuracy:0.46, Test-Error:0.652 -> Test-Accuracy:0.6435
@@ -22,7 +31,9 @@ Epoch:299 Training-Error:0.625-> Training-Accuracy:0.611, Test-Error:0.575 -> Te
 Third run (minibatch=64, lr=0.005):
 Epoch:299 Training-Error:0.453-> Training-Accuracy:0.747, Test-Error:0.441 -> Test-Accuracy:0.8012
 
-4. Adding Data Augmentation
+# 4. Adding Data Augmentation ( Test Accuracy -> 0.8012 )
+
+Results :
 
 First run (minibatch =64, lr=0.001):
 Epoch:299 Training-Error:0.625-> Training-Accuracy:0.611, Test-Error:0.575 -> Test-Accuracy:0.7148
@@ -33,9 +44,12 @@ Epoch:299 Training-Error:0.453-> Training-Accuracy:0.747, Test-Error:0.441 -> Te
 Third run (minibatch =100, lr=0.005):
 Epoch:299 Training-Error:0.512-> Training-Accuracy:0.75, Test-Error:0.472 -> Test-Accuracy:0.7804
 
-5. Plot the results and Confusion Matrix
+# 5. Plot the results and Confusion Matrix, update the code with class Linear, Relu and MSE cost function ( Test Accuracy -> 0.958 )
+- Update the code using the class Linear, class MSE and class Relu activation function.
+- Using the minibatch with data augmentation but no dropout method because it causes some error in dimensions.
+- The highest accuracy I got is 95.8% 
 
-# Part2 - NN MNIST Using Keras
+# Part2 - NN MNIST Using Keras - Accuracy ( 0.9802 )
 1. Perform one-hot encoding, reshaping the mnist data and normalization prior training.
 
 2. Used optimizer = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0).
